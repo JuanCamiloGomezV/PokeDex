@@ -1,0 +1,239 @@
+@import url("https://fonts.googleapis.com/css?family=Open+Sans|Open+Sans+Condensed:300,700");
+body {
+  font-family: "Open Sans", Helvetica, sans-serif;
+  text-align: center;
+  margin: 20px;
+}
+
+img {
+  max-height: 150px;
+  margin: auto;
+  display: inline-block;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+  margin: 0;
+  font-weight: 400;
+}
+
+.target {
+  cursor: pointer;
+  display: inline-block;
+  width: 300px;
+  padding: 1em;
+  border-radius: 15px;
+  margin: 10px;
+  background: #ddd;
+  text-align: left;
+  box-shadow: 0px 5px 20px -10px #111111;
+  position: relative;
+  transition: 0.4s;
+}
+.target__caption {
+  background-color: rgba(255, 255, 255, 0.65);
+  padding: 1em;
+  position: relative;
+  border-radius: 0 0 3px 3px;
+}
+.target__image-container {
+  background-color: rgba(0, 0, 0, 0.7);
+  text-align: center;
+  padding: 1em 1em 0;
+  border-radius: 3px 3px 0 0;
+}
+.target__type {
+  position: absolute;
+  top: 0;
+  right: 1em;
+  transform: translateY(-50%);
+  color: #ffffff;
+  text-transform: uppercase;
+  font-family: "Open Sans Condensed", "Open Sans", helvetica, sans-serif;
+  letter-spacing: 0.1em;
+  padding: 0.25em;
+  line-height: 1;
+  border-radius: 2px;
+  background: #bbbbbb;
+}
+.target__label {
+  font-size: 10px;
+  text-transform: uppercase;
+  font-weight: 400;
+  display: block;
+  margin-bottom: 3px;
+}
+.target__name {
+  font-family: "Open Sans Condensed", "Open Sans", helvetica, sans-serif;
+  text-align: center;
+  font-size: 1.5em;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+}
+.target__stats {
+  margin: 1em 0;
+  width: 100%;
+}
+.target__stats th {
+  font-family: "Open Sans Condensed", "Open Sans", helvetica, sans-serif;
+  text-align: right;
+  font-weight: 300;
+}
+.target__stats th,
+.target__stats td {
+  width: 50%;
+  padding: 0.25em 0.5em 0;
+}
+.target__abilities {
+  display: flex;
+  justify-content: space-between;
+}
+.target__ability {
+  margin-top: 1em;
+  flex: 1 0;
+}
+.target--normal {
+  background: linear-gradient(110deg, #FDBB2D 0%, #3A1C71 100%);
+  box-shadow: 0px 5px 20px -10px #3A1C71;
+}
+.target--normal .target__type {
+  background-color: #C08A53;
+}
+.target--water {
+  background: linear-gradient(120deg, #1CB5E0 0%, #000851 100%);
+  box-shadow: 0px 5px 20px -10px #000851;
+}
+.target--water .target__type {
+  background-color: #1CB5E0;
+}
+.target--electric {
+  background: linear-gradient(90deg, rgb(255, 222, 0) 34%, rgb(232, 255, 153) 83%);
+}
+.target--electric .target__type {
+  background-color: #000;
+}
+.target--fire {
+  background: linear-gradient(0deg, rgb(199, 24, 0) 10%, rgb(252, 194, 69) 100%);
+}
+.target--fire .target__type {
+  background-color: rgb(199, 24, 0);
+}
+.target--psychic {
+  background: linear-gradient(140deg, rgb(255, 167, 249) 0%, rgb(255, 44, 195) 39%, rgb(255, 227, 167) 100%);
+}
+.target--psychic .target__type {
+  background: #ff2cc3;
+}
+.target--dark {
+  background: linear-gradient(20deg, rgb(25, 25, 25) 0%, rgb(16, 11, 50) 33%, rgb(92, 2, 73) 100%);
+}
+.target--dark .target__type {
+  background: #5c0249;
+}
+.target--grass {
+  background: linear-gradient(140deg, rgb(196, 218, 61) 0%, rgb(110, 127, 14) 69%, rgb(39, 80, 9) 100%);
+}
+.target--grass .target__type {
+  background: #6e7f0e;
+}
+.target--ice {
+  background: linear-gradient(230deg, rgb(202, 234, 246) 0%, rgb(160, 234, 241) 46%, rgb(111, 184, 235) 100%);
+}
+.target--ice .target__type {
+  background: #6fb8eb;
+}
+.target--fairy {
+  background: linear-gradient(45deg, rgb(255, 230, 240) 0%, rgb(255, 197, 224) 34%, rgb(255, 166, 185) 71%, rgb(255, 138, 149) 100%);
+}
+.target--fairy .target__type {
+  background: #ff8a95;
+}
+.target--bug {
+  background: linear-gradient(45deg, rgb(232, 255, 230) 0%, rgb(197, 255, 207) 34%, rgb(173, 255, 166) 71%, rgb(142, 255, 138) 100%);
+}
+.target--bug .target__type {
+  background: rgb(142, 255, 138);
+}
+.target--poison {
+  background: linear-gradient(45deg, rgb(249, 230, 255) 0%, rgb(243, 197, 255) 34%, rgb(230, 166, 255) 71%, rgb(212, 138, 255) 100%);
+}
+.target--poison .target__type {
+  background: rgb(212, 138, 255);
+}
+.target--ground {
+  background: linear-gradient(45deg, #9c8e7f 0%, #a39587 34%, rgb(255, 194, 166) 71%, #a18262 100%);
+}
+.target--ground .target__type {
+  background: #a18262;
+}
+.target--fighting {
+  background: linear-gradient(45deg, rgb(59, 59, 59) 0%, rgb(87, 45, 45) 34%, rgb(94, 33, 33) 71%, rgb(94, 10, 10) 100%);
+}
+.target--fighting .target__type {
+  background: rgb(94, 10, 10);
+}
+.target--rock {
+  background: linear-gradient(45deg, rgb(59, 59, 59) 0%, rgb(66, 52, 52) 34%, rgb(75, 47, 47) 71%, rgb(65, 33, 33) 100%);
+}
+.target--rock .target__type {
+  background: rgb(65, 33, 33);
+}
+.target--ghost {
+  background: linear-gradient(45deg, rgb(59, 59, 59) 0%, rgb(57, 52, 66) 34%, rgb(60, 47, 75) 71%, rgb(48, 33, 65) 100%);
+}
+.target--ghost .target__type {
+  background: rgb(48, 33, 65);
+}
+.target--dragon {
+  background: linear-gradient(0deg, rgb(0, 89, 141) 10%, rgb(69, 215, 252) 100%);
+}
+.target--dragon .target__type {
+  background-color: rgb(0, 89, 141);
+}
+.target--steel {
+  background: linear-gradient(0deg, rgb(65, 65, 65) 10%, rgb(180, 180, 180) 100%);
+}
+.target--steel .target__type {
+  background-color: rgb(57, 124, 97);
+}
+.target--flying {
+  background: linear-gradient(45deg, rgb(59, 59, 59) 0%, rgb(52, 56, 66) 34%, rgb(47, 58, 75) 71%, rgb(33, 47, 65) 100%);
+}
+.target--flying .target__type {
+  background: rgb(69, 87, 110);
+}
+.target:nth-child(1) {
+  transform: translateY(0px) rotate(1deg);
+}
+.target:nth-child(2) {
+  transform: translateY(0px) rotate(2deg);
+}
+.target:nth-child(3) {
+  transform: translateY(0px) rotate(-4deg);
+}
+.target:nth-child(4) {
+  transform: translateY(0px) rotate(4deg);
+}
+.target:nth-child(5) {
+  transform: translateY(0px) rotate(-5deg);
+}
+.target:nth-child(6) {
+  transform: translateY(0px) rotate(-2deg);
+}
+.target:nth-child(7) {
+  transform: translateY(0px) rotate(2deg);
+}
+.target:nth-child(8) {
+  transform: translateY(0px) rotate(4deg);
+}
+.target:nth-child(9) {
+  transform: translateY(0px) rotate(0deg);
+}
+.target:hover {
+  z-index: 5;
+  box-shadow: 0px 13px 30px -15px #000000;
+  transform: translateY(-10px);
+}/*# sourceMappingURL=CardPokemon.css.map */
